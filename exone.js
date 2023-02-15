@@ -5,10 +5,10 @@ function setup() {
 }
 
 function draw() {
-  
-  addclone ();
+    noStroke (0)
 
-if (mouseIsPressed) {
+   //batallion colors
+  if (mouseIsPressed) {
 		fill("orange");   // 212th legion 
 	} else if (mouseX>100 && mouseX<=200) {
 		fill("dodgerblue"); // 501st legion
@@ -21,29 +21,17 @@ if (mouseIsPressed) {
     } else if (mouseY>200) {
 		fill(" palegreen"); //Deppa Bilaba color
     }  else { fill("red"); //courasaunt guard
+            
+    }   triangle(50, 0, 200, 400, 350, 0);
         
- }
-	
-
- 
-}
-
-function addclone (x,y,size) {
-  push ();
-  translate(x, y);
-  scale (size);
-
-
-noStroke (0)
- 
-  //batallion color
-  triangle(50, 0, 200, 400, 350, 0);
-
   //visor
   fill ('black')
   rect (50,50,300, 75)
   rect (150,50,90,225)
   triangle(200, 220, 400, 380, 200, 310);
   triangle(200, 220, 0, 380, 200, 310);
-  pop();
+
+  
 }
+ 
+	
